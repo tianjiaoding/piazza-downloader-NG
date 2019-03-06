@@ -1,6 +1,6 @@
 
 
-# Piazza resources downloader
+# Piazza-resources-downloader-NG
 
 Provides a tool to download all resources linked in the Piazza resources panel.
 
