@@ -1,35 +1,43 @@
-# Piazza study resources downloader
 
-Provides you with an ability to download all resources linked in the piazza resources panel.
 
-## How it works
+# Piazza resources downloader
 
-In order to make it work follow the steps:
+Provides a tool to download all resources linked in the Piazza resources panel.
 
-1. Create an empty directory and go there
+## Requirements
+* `Python`, works with either 2 or 3.
 
-2. Dowload the repository `git clone https://github.com/warmspringwinds/piazza_resources_downloader.git`
+* `Requests`, which is a handy library to handle http operations. It can be installed via different ways.
 
-3. Go to piazza resources page where all the resources can be dowloaded.
+  **Using pip:**
+  ```shell
+  pip install requests
+  ```
+  **Using anaconda:**
+  ```shell
+  conda install -c anaconda requests
+  ```
 
-4. If you are in Chrome press `ctrl + shift + j` and paste the contents of the `fetch_urls_and_names.js`
-into the console. If you are using Firefox got to `Developer > Debugger` and then `Console` in the opened window. It can warn you when you try to paste that you have to first type in the console `allow pasting`.
+## Getting started
 
-5. You should see outputs in your console with links and with names. Copy both outputs in respective files in repository. Just delete what exists already in the files and put you result there.:
-`resources_links.txt` and `resources_names.txt`.
+1. Clone the repository.
+```shell
+git clone https://github.com/tianjiaoding/piazza-downloader-NG.git
+```
+1. Go to Piazza resources page where all the resources can be dowloaded.
 
-6. While being in the repository directory run `python get_resources_files.py`.
+1. In your broswer, excute the Javascript code `fetch_urls_and_names.js` that is in the repository.
 
-## Shorter way
+  * For example, if you are using Chrome, press `F12` and go to the `Console` tab. If you are using Firefox, got to `Developer > Debugger` and then `Console`.
+  * Copy and paste the aforementioned code, then press `Enter`.
 
-### Use existing links
+1. You should see outputs in your console with links and with names. Put links in `resources_links.txt`, and put names in `resources_names.txt`. Replace the existing ones if you like.
 
-I have already extracted all the links and filenames for `Machine Learning course in Tum`.
-So in order to download it just do steps `1, 2, 6` from the aforementioned guide.
+1. Edit your login details in the Python code, and execute it.
+```shell
+cd piazza-downloader-NG
+python get_resources_files.py
+```
 
-But be careful while doing this. The links are changed sometimes and you can get no files in that case.
-Better use the first approach or just download the archive.
-
-### `Machine Learning course in Tum` archive
-
-Or you can just download the archived [zip](https://drive.google.com/file/d/0B_6oHpf9oDHRY2c4U19FRnFRSEk/view?usp=sharing)
+# Acknowledgement
+This work is based on [`warmspringwinds`'s repository](https://github.com/warmspringwinds/piazza_resources_downloader). However, the original version is no longer being maintained and not functional in many cases, e.g., when login is required, or the link contains newline symbol. This work aims at fixing those problems and providing a working tool.

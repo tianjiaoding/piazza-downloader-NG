@@ -5,7 +5,7 @@ file_names = [];
 results = document.getElementsByClassName("resource_title");
 
 $.each(results, function(index, element){
-    
+
     current_element = $(element);
     file_links.push( current_element.prop("href") );
     file_names.push( current_element.text() );
