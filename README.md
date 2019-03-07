@@ -40,5 +40,5 @@ cd piazza-downloader-NG
 python get_resources_files.py
 ```
 
-# Acknowledgement
+## Acknowledgement
 This work is based on [`warmspringwinds`'s repository](https://github.com/warmspringwinds/piazza_resources_downloader). However, the original version is no longer being maintained and not functional in many cases, e.g., when login is required, or the link contains newline symbol. This work aims at fixing those problems and providing a working tool.
