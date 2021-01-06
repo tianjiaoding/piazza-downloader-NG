@@ -4,6 +4,9 @@
 
 Provides a tool to download all resources linked in the Piazza resources panel.
 
+## Updates
+* `Jan 6, 2021` the rules for parsing resource links and names are updated to keep up with the latest Piazza.
+
 ## Requirements
 * `Python`, works with either 2 or 3.
 
