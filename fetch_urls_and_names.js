@@ -2,13 +2,19 @@
 file_links = [];
 file_names = [];
 
-results = document.getElementsByClassName("resource_title");
+results = document.getElementsByTagName("a");
 
 $.each(results, function(index, element){
 
     current_element = $(element);
-    file_links.push( current_element.prop("href") );
-    file_names.push( current_element.text() );
+    if (current_element.attr("data-pats") == "resources_link")
+    {
+        if (current_element.attr("href") != "#")
+        {
+            file_links.push( current_element.prop("href") );
+            file_names.push( current_element.text() );
+        }
+    }
 });
 
 file_links_output = file_links.join("\n");
